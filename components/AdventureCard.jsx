@@ -27,7 +27,7 @@ export default function AdventureCard({ _path, href, title, price, duration, ima
           width={542}
           height={605}
           priority={aboveFold}
-          loading={aboveFold ? 'eager' : 'lazy'}
+          loading='lazy'
           sizes="50vw"
           className="w-full h-full object-center object-cover lg:w-full lg:h-full"
         />

@@ -3,18 +3,40 @@ import '#/styles/globals.css';
 import { AdventureClient } from '#/lib/adventures';
 import AdventureCard from '#/components/AdventureCard';
 import { cache } from 'react';
+import { Metadata } from 'next';
 
 export const revalidate = 60; // revalidate this page every 60 seconds
 
 const NEXT_PUBLIC_AEM_HOST = process.env.NEXT_PUBLIC_AEM_HOST;
 const NEXT_PUBLIC_AEM_ROOT = process.env.NEXT_PUBLIC_AEM_ROOT;
 
+const client = AdventureClient.fromEnv();
+
 const getAdventures = cache(async () => {
-  const client = AdventureClient.fromEnv();
   const res = await client.getAllAdventures();
   const adventures = res?.data?.adventureList?.items;
   return adventures;
 });
+
+
+export function generateMetadata() {
+  return {
+    title: 'Sparkle Adventures',
+    description: 'Sparkle RSC demo',
+    keywords: 'sparkle, rsc, demo, nextjs, react, aem, cards',
+    // link: [
+    //   {
+    //     rel: 'preload',
+    //     fetchPriority: "high",
+    //     as: 'image',
+    //     href: 'bla.jpg',
+    //   }
+    // ],
+  };
+}
+
+
+
 
 export default async function Page() {
 

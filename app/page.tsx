@@ -9,6 +9,22 @@ import '../styles/anim.css'
 
 export const revalidate = 3600; // revalidate every minute? sec?
 
+export function generateMetadata() : any {
+  return {
+    title: 'Sparkle',
+    description: 'Sparkle RSC demo',
+    keywords: 'sparkle, rsc, demo, nextjs, react, aem',
+    // link: [
+    //   {
+    //     rel: 'preload',
+    //     fetchPriority: "high",
+    //     as: 'image',
+    //     href: '/_next/image?url=https%3A%2F%2Fpublish-p81252-e700817.adobeaemcloud.com%2F%2Fcontent%2Fdam%2Fsample-wknd-app%2Fen%2Fimage-files%2Fbiker.png&amp;w=640&amp;q=90',
+    //   }
+    // ],
+  };
+}
+
 export default async function Page() {
 
   const props = await fetchDataCached();

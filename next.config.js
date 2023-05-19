@@ -6,6 +6,9 @@ const nextConfig = {
     // Required:
     appDir: true,
   },
+  //https://github.com/Azure/static-web-apps/discussions/1066
+  //https://nextjs.org/docs/pages/api-reference/next-config-js/output
+  output:"standalone",
   images: {
     minimumCacheTTL: 12000,
     remotePatterns: [

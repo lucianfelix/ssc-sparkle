@@ -1,4 +1,3 @@
-'use server';
 
 /*
  * Copyright 2023 Adobe. All rights reserved.
@@ -16,7 +15,7 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
-export default function AdventureCard({ _path, href, title, price, duration, imageSrc }) {
+export default async function AdventureCard({ _path, href, title, price, duration, imageSrc }) {
   const aboveFold = imageSrc.includes("bali-surf-camp");
   return (
     <div key={_path} className="group relative">

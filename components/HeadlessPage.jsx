@@ -1,5 +1,3 @@
-'use server';
-
 import MobileHeader from './MobileHeader';
 import Panel from './Panel';
 import PanelAnimationWrapper from '#/components/PanelAnimationWrapper';

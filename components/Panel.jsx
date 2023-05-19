@@ -1,4 +1,3 @@
-'use server';
 
 import LayerImage from '../components/LayerImage';
 import TextLayer from '../components/TextLayer';

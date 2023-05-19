@@ -1,4 +1,4 @@
-'use server';
+
 
 import HeadlessPage from '#/components/HeadlessPage';
 import '#/styles/globals.scss';
